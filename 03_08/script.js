@@ -19,6 +19,12 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  toString: function () {
+    return `Backpack: ${this.name}, Volume: ${this.volume} liters`
+  },
+  sayHello: function () {
+    return `Hello ${this.name}!`
+  },
 };
 
 console.log("The backpack object:", backpack);
@@ -28,3 +34,8 @@ console.log("Left before: ", backpack.strapLength.left);
 backpack.newStrapLength(10, 15);
 
 console.log("Left after: ", backpack.strapLength.left);
+
+console.log(backpack.volume.valueOf());
+console.log(backpack.volume.toString());
+console.log(backpack.toString());
+console.log(backpack.sayHello());
